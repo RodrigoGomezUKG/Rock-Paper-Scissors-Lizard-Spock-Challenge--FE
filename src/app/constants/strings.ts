@@ -1,0 +1,1 @@
+export const welcomeTitle = 'welcome to the mission \n WE ARE BEYOND'

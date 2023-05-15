@@ -1,0 +1,85 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/WelcomeBackground.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: #ffff;
+}
+
+article {
+    flex-grow: 1;
+}
+
+.welcome {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: -40px;
+
+    & p {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36.1815px;
+        line-height: 43px;
+    }
+}
+
+h1 {
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55.5102px;
+
+    & span {
+        font-family: 'Abril Fatface';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 116.721px;
+        line-height: 89px;
+
+        text-transform: uppercase;
+    }
+}
+
+.nav {
+    position: relative;
+    border: 1px solid;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    & h2 {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 46px;
+        color: #17978E;
+    }
+}
+
+.gradient {
+    position: absolute;
+    background-image: radial-gradient(65.25% 64.6% at 108.14% 109.28%, #17978E 0%, rgba(23, 151, 142, 0) 100%);
+    height: 100%;
+    width: 100%;
+}
+
+.topLogo {
+    width: 7%;
+}
+
+.bottomLogo {
+    width: 5%;
+    float: right;
+}
