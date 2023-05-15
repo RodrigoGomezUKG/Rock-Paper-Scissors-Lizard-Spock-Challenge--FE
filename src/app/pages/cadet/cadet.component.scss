@@ -1,0 +1,46 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: url('../../../assets/pexels-alisson-silva-8150782.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header, footer{
+    flex: 1 0 15%;
+}
+
+footer{
+    text-align: right;
+}
+
+
+.cards_container{
+    display: flex;
+    flex: 1 0 70%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.player{
+    // padding: 0 20px;
+    flex: 1 0 45%;
+}
+
+.vs{
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 10%;
+}
+
+footer{
+    background-image: url('../../../assets/UKG-On\ Light.svg');
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 150px ;
+}
