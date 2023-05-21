@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { CadetComponent } from './pages/cadet/cadet.component';
 import { PlayerComponent } from './components/player/player.component';
+import { HttpClientModule } from '@angular/common/http';
+import { StartingComponent } from './pages/starting/starting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     CadetComponent,
-    PlayerComponent
+    PlayerComponent,
+    StartingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

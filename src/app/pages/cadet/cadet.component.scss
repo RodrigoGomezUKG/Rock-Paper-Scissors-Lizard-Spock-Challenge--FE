@@ -1,46 +1,103 @@
-.wrapper{
+.game_wrapper {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     padding: 20px;
-    background-image: url('../../../assets/pexels-alisson-silva-8150782.jpg');
+    flex-direction: column;
+    background-image: linear-gradient(180deg, #000000 10.6%, rgba(0, 0, 0, 0) 124.41%), url('../../../assets/WelcomeBackground.jpeg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    // background-image: url('../../../assets/pexels-alisson-silva-8150782.jpg');
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    color: #fff;
+
 }
 
-header, footer{
-    flex: 1 0 15%;
-}
-
-footer{
-    text-align: right;
-}
-
-
-.cards_container{
+h2 {
+    border-left: 2px solid;
     display: flex;
-    flex: 1 0 70%;
-    width: 70%;
+    height: 50%;
+    color: rgba(23, 151, 142, 1);
+    padding-left: 10px;
+    align-items: center;
+}
+
+header {
+    height: 12%;
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    & img {
+        display: block;
+        max-height: 100%;
+        margin-right: 10px;
+    }
+}
+
+.cards_container {
+    height: 76%;
+    display: flex;
+    justify-content: center;
+    width: 85%;
     margin: 0 auto;
 }
 
-.player{
-    // padding: 0 20px;
-    flex: 1 0 45%;
+.player {
+    flex: 0 0 40%;
 }
 
-.vs{
+.vs {
+    position: relative;
+    display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1 0 10%;
+    flex: 0 0 10%;
+    color: #fff;
+    font-family: 'Abel';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    text-align: center;
+
+    & button {
+        position: absolute;
+        bottom: -10%;
+        width: 150px;
+        height: 40px;
+    }
 }
 
-footer{
-    background-image: url('../../../assets/UKG-On\ Light.svg');
+footer {
+    height: 12%;
+    background-image: url('../../../assets/UKG-On Light.svg');
     background-repeat: no-repeat;
-    background-position: bottom right;
-    background-size: 150px ;
+    background-size: 7%;
+    background-position: right bottom;
 }
+
+// .wrapper{
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: rgb(199, 247, 247);
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// header{
+//     background-color: darkolivegreen;
+//     height: 10%;
+// }
+
+// .content{
+//     background-color: coral;
+//     height: 80%;
+// }
+
+// footer{
+//     background-color: lightgreen;
+//     height: 10%;
+// }
