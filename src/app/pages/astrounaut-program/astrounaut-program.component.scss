@@ -1,0 +1,96 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(180deg, #000000 10.6%, rgba(0, 0, 0, 0) 124.41%), url('../../../assets/pexels-alisson-silva-8150782.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+header {
+    flex: 1 0 auto;
+}
+
+.content {
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    width: 55%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    & h1 {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 88.1928px;
+        line-height: 88px;
+        color: #C08FFF;
+    }
+
+    & p {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 64px;
+        color: #Fff;
+    }
+
+    & a {
+        display: block;
+        cursor: pointer;
+        color: #fff;
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 50px;
+        align-self: flex-start;
+        padding: .5rem;
+        transition: background-color .7s;
+        border: none;
+    }
+
+    & a:hover {
+        background-color: #C08FFF;
+    }
+
+
+}
+
+.topLogo {
+    width: 7%;
+}
+
+.gradient {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: radial-gradient(65.25% 64.6% at 108.14% 109.28%, #C08FFF 0%, rgba(192, 143, 255, 0) 100%);
+    height: 100%;
+    width: 100%;
+    border-radius: 24px;
+    z-index: -1;
+}
+
+footer {
+    flex: 1 0 auto;
+}
+
+.bottomLogo {
+    width: 7%;
+    float: right;
+}

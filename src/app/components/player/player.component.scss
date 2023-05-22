@@ -6,8 +6,8 @@
     color: black;
     color: #fff;
     position: relative;
-    -webkit-box-shadow: 0px 0px 28px 2px rgba(86, 180, 233, 1);
-    -moz-box-shadow: 0px 0px 28px 2px rgba(86, 180, 233, 1);
+    // -webkit-box-shadow: 0px 0px 28px 2px rgba(86, 180, 233, 1);
+    // -moz-box-shadow: 0px 0px 28px 2px rgba(86, 180, 233, 1);
     box-shadow: 0px 0px 28px 2px rgba(86, 180, 233, 1);
 }
 
@@ -19,7 +19,7 @@
     border-radius: 50%;
     margin-top: 4rem;
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: cover;
     background-position: center;
 
 }
@@ -37,10 +37,12 @@
     }
 }
 
+button {
+    padding: .5rem 1rem;
+}
+
 .gradient {
     position: absolute;
-    background: radial-gradient(69.35% 75.55% at 96.74% 100%, #56B4E9 0%, rgba(86, 180, 233, 0) 100%);
-
     opacity: 0.5;
     height: 100%;
     width: 100%;

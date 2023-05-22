@@ -21,7 +21,7 @@ const handsPath = {
   LIZZARD: "url('../../../assets/lizard.svg')",
 };
 
-const drawResult = 3
+const drawResult = 3;
 
 @Component({
   selector: 'app-player',
@@ -37,24 +37,37 @@ export class PlayerComponent implements OnInit, OnChanges {
   intervalRef: any;
   displayerResult = 'DRAW';
 
-
   constructor(
     private gameService: GameService,
     private elementRef: ElementRef
   ) {}
 
   ngOnInit(): void {
-    // this.callPlayer(this.id)
+    this.setAstronautStyleSettings()
+  }
 
-    this.intervalRef = setInterval(() => {
-      if (!this.player) {
-        this.callPlayer(this.id);
-      }
-      if (this.player) {
-        this.emitReady(true);
-        clearInterval(this.intervalRef);
-      }
-    }, 5000);
+  playerMove() {
+    if (!this.player) {
+      this.callPlayer(this.id);
+    }
+  }
+
+  setAstronautStyleSettings(){
+    const circle = this.elementRef.nativeElement.firstChild.childNodes[1].childNodes[1]
+    const gradient = this.elementRef.nativeElement.firstChild.childNodes[0]
+    const card = this.elementRef.nativeElement.firstChild
+    console.log(card)
+    if(this.id === 1){
+      circle.style.border = "1px solid #56B4E9";
+      circle.style.backgroundImage = "url('../../../assets/astronaut1.svg')"
+      gradient.style.background = "radial-gradient(69.35% 75.55% at 96.74% 100%, #56B4E9 0%, rgba(86, 180, 233, 0) 100%)"
+    }
+    if(this.id === 2){
+      circle.style.border = "1px solid #8629FF";
+      circle.style.backgroundImage = "url('../../../assets/astronaut2.svg')"
+      gradient.style.background = "radial-gradient(69.35% 75.55% at 96.74% 100%, #C08FFF 0%, rgba(86, 180, 233, 0) 100%)"
+      card.style.boxShadow = "0px 0px 28px 2px rgba(134, 41, 255, 1)"
+    }
   }
 
   ngOnChanges() {
@@ -117,10 +130,15 @@ export class PlayerComponent implements OnInit, OnChanges {
   callPlayer(id: number) {
     return this.gameService.callPlayer(id).subscribe({
       next: (player) => {
-        if (player) {
-          this.player = player;
+        if(player.gameValue){
+          this.player = player
         }
       },
+      complete: () => {
+        if(this.player){
+          this.emitReady(true)
+        }
+      }
     });
   }
 }

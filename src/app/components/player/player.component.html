@@ -3,6 +3,7 @@
     <div class="item">
         <h1>Cadet {{id}}</h1>
         <div class="circle"></div>
+        <button *ngIf="!player" (click)="playerMove()">play!</button>
         <img *ngIf="player && !result" src="../../../assets/readyLogo.svg" width="50px" alt="">
         <p *ngIf="result">{{displayerResult}}</p>
         <!-- <button (click)="changeBakcground()">change background</button> -->

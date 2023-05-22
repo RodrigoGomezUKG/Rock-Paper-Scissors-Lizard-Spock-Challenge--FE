@@ -9,7 +9,8 @@
         </section>
         <section class="vs">
             <p>VS</p>
-            <button *ngIf="players.length === 2" (click)="displayResult()">Play the game</button>
+            <button (click)="backToStart()" *ngIf="displayedMatch">Back to start</button>
+            <button *ngIf="players.length === 2 && !displayedMatch" (click)="displayResult()">Play the game</button>
         </section>
         <section class="player">
             <app-player (valorEnviado)="manejarValor($event)" [id]="2" [result]="result"></app-player>

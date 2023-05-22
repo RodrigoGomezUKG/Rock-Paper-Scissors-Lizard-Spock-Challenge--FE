@@ -8,6 +8,9 @@ import { CadetComponent } from './pages/cadet/cadet.component';
 import { PlayerComponent } from './components/player/player.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StartingComponent } from './pages/starting/starting.component';
+import { CadetProgramComponent } from './pages/cadet-program/cadet-program.component';
+import { PilotProgramComponent } from './pages/pilot-program/pilot-program.component';
+import { AstrounautProgramComponent } from './pages/astrounaut-program/astrounaut-program.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { StartingComponent } from './pages/starting/starting.component';
     WelcomeComponent,
     CadetComponent,
     PlayerComponent,
-    StartingComponent
+    StartingComponent,
+    CadetProgramComponent,
+    PilotProgramComponent,
+    AstrounautProgramComponent
   ],
   imports: [
     BrowserModule,
