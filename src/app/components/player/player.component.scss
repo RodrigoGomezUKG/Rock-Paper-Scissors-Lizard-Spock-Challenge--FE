@@ -13,32 +13,52 @@
 
 .circle {
     margin: 0 auto;
-    width: 220px;
-    height: 220px;
+    width: 420px;
+    height: 420px;
     border: 1px solid #fff;
     border-radius: 50%;
     margin-top: 4rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
 .item {
-
     flex-grow: 1;
     background-color: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
-    padding: 3rem 0;
+    padding: 2rem;
 
-    & img {
+    & img,
+    & p,
+    & button {
         margin-top: 6rem;
-        transition: display 1s ease;
     }
+}
+
+h1{
+    font-size: 2rem;
 }
 
 button {
     padding: .5rem 1rem;
+    text-decoration: none;
+    font-size: 18px;
+    background: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid black;
+}
+
+button:hover {
+    color: #fff;
+    background-color: black;
+    border: 2px solid #fff;
+
 }
 
 .gradient {

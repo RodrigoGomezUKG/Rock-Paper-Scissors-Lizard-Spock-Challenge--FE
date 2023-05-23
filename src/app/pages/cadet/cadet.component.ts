@@ -16,6 +16,7 @@ export class CadetComponent implements OnInit {
   winner : number = 1
   displayedMatch = false
   valueResult!: any 
+  displayMoves = false
   
 
   ngOnInit(): void {}
@@ -23,6 +24,7 @@ export class CadetComponent implements OnInit {
   displayResult(){
     if(this.btnReady){
       this.result = this.valueResult
+      this.displayMoves = true
       this.displayedMatch = true
       console.log('entra al boton')
     }

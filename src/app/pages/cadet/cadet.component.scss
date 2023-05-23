@@ -1,6 +1,6 @@
 .game_wrapper {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
     display: flex;
     padding: 20px;
     flex-direction: column;
@@ -68,6 +68,7 @@ header {
         bottom: -10%;
         width: 150px;
         height: 40px;
+        text-align: center;
     }
 }
 

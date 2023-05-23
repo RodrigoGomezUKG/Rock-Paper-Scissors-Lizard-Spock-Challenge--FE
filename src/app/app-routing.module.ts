@@ -6,6 +6,7 @@ import { StartingComponent } from './pages/starting/starting.component';
 import { CadetProgramComponent } from './pages/cadet-program/cadet-program.component';
 import { PilotProgramComponent } from './pages/pilot-program/pilot-program.component';
 import { AstrounautProgramComponent } from './pages/astrounaut-program/astrounaut-program.component';
+import { RulesComponent } from './pages/rules/rules.component';
 
 const routes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'cadet-program', component: CadetProgramComponent},
   {path:'pilot-program', component: PilotProgramComponent},
   {path:'astronaut-program', component: AstrounautProgramComponent},
+  {path:'rules', component: RulesComponent},
 ];
 
 @NgModule({

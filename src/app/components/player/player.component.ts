@@ -31,6 +31,7 @@ const drawResult = 3;
 export class PlayerComponent implements OnInit, OnChanges {
   @Input() id!: number;
   @Input() result!: number;
+  @Input() displayPlayerMove = false;
   @Output() valorEnviado = new EventEmitter<boolean>();
   @HostBinding('style.backgroundColor') backgroundColor: string = 'black';
   player!: any;
@@ -43,7 +44,7 @@ export class PlayerComponent implements OnInit, OnChanges {
   ) {}
 
   ngOnInit(): void {
-    this.setAstronautStyleSettings()
+    this.setAstronautStyleSettings();
   }
 
   playerMove() {
@@ -52,21 +53,24 @@ export class PlayerComponent implements OnInit, OnChanges {
     }
   }
 
-  setAstronautStyleSettings(){
-    const circle = this.elementRef.nativeElement.firstChild.childNodes[1].childNodes[1]
-    const gradient = this.elementRef.nativeElement.firstChild.childNodes[0]
-    const card = this.elementRef.nativeElement.firstChild
-    console.log(card)
-    if(this.id === 1){
-      circle.style.border = "1px solid #56B4E9";
-      circle.style.backgroundImage = "url('../../../assets/astronaut1.svg')"
-      gradient.style.background = "radial-gradient(69.35% 75.55% at 96.74% 100%, #56B4E9 0%, rgba(86, 180, 233, 0) 100%)"
+  setAstronautStyleSettings() {
+    const circle =
+      this.elementRef.nativeElement.firstChild.childNodes[1].childNodes[1];
+    const gradient = this.elementRef.nativeElement.firstChild.childNodes[0];
+    const card = this.elementRef.nativeElement.firstChild;
+    console.log(card);
+    if (this.id === 1) {
+      circle.style.border = '2px solid #56B4E9';
+      circle.style.backgroundImage = "url('../../../assets/astronaut1.svg')";
+      gradient.style.background =
+        'radial-gradient(69.35% 75.55% at 96.74% 100%, #56B4E9 0%, rgba(86, 180, 233, 0) 100%)';
     }
-    if(this.id === 2){
-      circle.style.border = "1px solid #8629FF";
-      circle.style.backgroundImage = "url('../../../assets/astronaut2.svg')"
-      gradient.style.background = "radial-gradient(69.35% 75.55% at 96.74% 100%, #C08FFF 0%, rgba(86, 180, 233, 0) 100%)"
-      card.style.boxShadow = "0px 0px 28px 2px rgba(134, 41, 255, 1)"
+    if (this.id === 2) {
+      circle.style.border = '2px solid #8629FF';
+      circle.style.backgroundImage = "url('../../../assets/astronaut2.svg')";
+      gradient.style.background =
+        'radial-gradient(69.35% 75.55% at 96.74% 100%, #C08FFF 0%, rgba(86, 180, 233, 0) 100%)';
+      card.style.boxShadow = '0px 0px 28px 2px rgba(134, 41, 255, 1)';
     }
   }
 
@@ -85,6 +89,10 @@ export class PlayerComponent implements OnInit, OnChanges {
         console.log('defeat entry');
       }
     }
+
+    if (this.displayPlayerMove) {
+      this.setPlayerMove();
+    }
   }
 
   defaultBackground() {
@@ -95,29 +103,38 @@ export class PlayerComponent implements OnInit, OnChanges {
   emitReady(value: boolean) {
     this.valorEnviado.emit(value);
   }
-
-  changeBakcground() {
-    const element = this.elementRef.nativeElement;
+  setPlayerMove() {
+    const element =
+      this.elementRef.nativeElement.childNodes[0].childNodes[1].childNodes[1];
     const ROOT_URL = '../../../assets/';
     console.log(element);
+    const playerMoveImg = `<img width="100px" src="${ROOT_URL}">`;
+    const img = document.createElement('img');
+    const route = '../../../assets/scissor.svg';
+    img.setAttribute('width', '150px');
+    console.log(img);
+
+    element.style.backgroundImage = 'none';
+    // element.appendChild(playerMoveImg)
 
     switch (this.player.gameValue) {
       case 'SCISSORS':
-        element.firstChild.childNodes[0].childNodes[1].style.backgroundImage = `url(${ROOT_URL}scissor.svg)`;
+        img.setAttribute('src', `${ROOT_URL}scissor.svg`);
         break;
       case 'PAPER':
-        element.firstChild.childNodes[0].childNodes[1].style.backgroundImage = `url(${ROOT_URL}paper.svg)`;
+        img.setAttribute('src', `${ROOT_URL}paper.svg`);
         break;
       case 'LIZARD':
-        element.firstChild.childNodes[0].childNodes[1].style.backgroundImage = `url(${ROOT_URL}lizard.svg)`;
+        img.setAttribute('src', `${ROOT_URL}lizard.svg`);
         break;
       case 'SPOCK':
-        element.firstChild.childNodes[0].childNodes[1].style.backgroundImage = `url(${ROOT_URL}spock.svg)`;
+        img.setAttribute('src', `${ROOT_URL}spock.svg`);
         break;
       case 'ROCK':
-        element.firstChild.childNodes[0].childNodes[1].style.backgroundImage = `url(${ROOT_URL}rock.svg)`;
+        img.setAttribute('src', `${ROOT_URL}rock.svg`);
         break;
     }
+    element.appendChild(img);
   }
 
   setBackground() {
@@ -130,15 +147,15 @@ export class PlayerComponent implements OnInit, OnChanges {
   callPlayer(id: number) {
     return this.gameService.callPlayer(id).subscribe({
       next: (player) => {
-        if(player.gameValue){
-          this.player = player
+        if (player.gameValue) {
+          this.player = player;
         }
       },
       complete: () => {
-        if(this.player){
-          this.emitReady(true)
+        if (this.player) {
+          this.emitReady(true);
         }
-      }
+      },
     });
   }
 }

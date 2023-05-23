@@ -1,0 +1,61 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, #000000 10.6%, rgba(0, 0, 0, 0) 124.41%), url('../../../assets/WelcomeBackground.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    flex: 1 0 auto;
+}
+
+.content {
+    flex: 0 0 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 55%;
+    height: 75%;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    & h1 {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 88.1928px;
+        line-height: 88px;
+        color: #fff;
+    }
+
+    & a {
+        color: #fff;
+        cursor: pointer;
+        padding: 1rem;
+    }
+
+}
+
+.rulesContainer {
+    flex: 0 0 70%;
+    background-image: url('../../../assets/Group.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+}
+
+footer {
+    flex: 1 0 auto;
+}

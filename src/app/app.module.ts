@@ -11,6 +11,7 @@ import { StartingComponent } from './pages/starting/starting.component';
 import { CadetProgramComponent } from './pages/cadet-program/cadet-program.component';
 import { PilotProgramComponent } from './pages/pilot-program/pilot-program.component';
 import { AstrounautProgramComponent } from './pages/astrounaut-program/astrounaut-program.component';
+import { RulesComponent } from './pages/rules/rules.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AstrounautProgramComponent } from './pages/astrounaut-program/astrounau
     StartingComponent,
     CadetProgramComponent,
     PilotProgramComponent,
-    AstrounautProgramComponent
+    AstrounautProgramComponent,
+    RulesComponent
   ],
   imports: [
     BrowserModule,
