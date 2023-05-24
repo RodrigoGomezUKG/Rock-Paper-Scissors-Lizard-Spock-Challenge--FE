@@ -1,6 +1,6 @@
 .game_wrapper {
-    min-width: 100vw;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     padding: 20px;
     flex-direction: column;
@@ -74,31 +74,7 @@ header {
 
 footer {
     height: 12%;
-    background-image: url('../../../assets/UKG-On Light.svg');
-    background-repeat: no-repeat;
-    background-size: 7%;
-    background-position: right bottom;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
-
-// .wrapper{
-//     width: 100vw;
-//     height: 100vh;
-//     background-color: rgb(199, 247, 247);
-//     display: flex;
-//     flex-direction: column;
-// }
-
-// header{
-//     background-color: darkolivegreen;
-//     height: 10%;
-// }
-
-// .content{
-//     background-color: coral;
-//     height: 80%;
-// }
-
-// footer{
-//     background-color: lightgreen;
-//     height: 10%;
-// }

@@ -104,19 +104,11 @@ export class PlayerComponent implements OnInit, OnChanges {
     this.valorEnviado.emit(value);
   }
   setPlayerMove() {
-    const element =
-      this.elementRef.nativeElement.childNodes[0].childNodes[1].childNodes[1];
+    const element = this.elementRef.nativeElement.childNodes[0].childNodes[1].childNodes[1];
     const ROOT_URL = '../../../assets/';
-    console.log(element);
-    const playerMoveImg = `<img width="100px" src="${ROOT_URL}">`;
     const img = document.createElement('img');
-    const route = '../../../assets/scissor.svg';
-    img.setAttribute('width', '150px');
-    console.log(img);
-
+    img.setAttribute('width', '30%');
     element.style.backgroundImage = 'none';
-    // element.appendChild(playerMoveImg)
-
     switch (this.player.gameValue) {
       case 'SCISSORS':
         img.setAttribute('src', `${ROOT_URL}scissor.svg`);
