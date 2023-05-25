@@ -8,6 +8,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 20px;
 }
 
 header {
@@ -63,6 +64,14 @@ a {
     font-size: 3rem;
 }
 
+.topLogo {
+    width: 7%;
+}
+
 footer {
     flex: 1 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
 }
