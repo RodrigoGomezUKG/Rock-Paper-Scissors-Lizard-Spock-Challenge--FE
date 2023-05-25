@@ -20,3 +20,5 @@
         <img class="bottomLogo" src="../../../assets/UKG-On Light.svg" alt="">
     </footer>
 </div>
+
+<app-result-timer (clearTimer)="clearTimer($event)"  *ngIf="displayTimer"></app-result-timer>

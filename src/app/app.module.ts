@@ -12,6 +12,7 @@ import { CadetProgramComponent } from './pages/cadet-program/cadet-program.compo
 import { PilotProgramComponent } from './pages/pilot-program/pilot-program.component';
 import { AstrounautProgramComponent } from './pages/astrounaut-program/astrounaut-program.component';
 import { RulesComponent } from './pages/rules/rules.component';
+import { ResultTimerComponent } from './components/result-timer/result-timer.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RulesComponent } from './pages/rules/rules.component';
     CadetProgramComponent,
     PilotProgramComponent,
     AstrounautProgramComponent,
-    RulesComponent
+    RulesComponent,
+    ResultTimerComponent
   ],
   imports: [
     BrowserModule,

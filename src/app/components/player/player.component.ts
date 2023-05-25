@@ -33,6 +33,7 @@ export class PlayerComponent implements OnInit, OnChanges {
   @Input() result!: number;
   @Input() displayPlayerMove = false;
   @Output() valorEnviado = new EventEmitter<boolean>();
+  @Output() clearTimer = new EventEmitter<boolean>();
   @HostBinding('style.backgroundColor') backgroundColor: string = 'black';
   player!: any;
   intervalRef: any;

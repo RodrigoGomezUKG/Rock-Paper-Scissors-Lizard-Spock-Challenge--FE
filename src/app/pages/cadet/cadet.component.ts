@@ -8,29 +8,37 @@ import { GameService } from 'src/app/services/game.service';
   styleUrls: ['./cadet.component.scss'],
 })
 export class CadetComponent implements OnInit {
-  constructor(private router: Router, private gameService: GameService) {}
-  
+  constructor(private router: Router, private gameService: GameService) { }
+
   players: boolean[] = [];
-  btnReady : boolean = false
-  result! : number
-  winner : number = 1
+  btnReady: boolean = false
+  result!: number
+  winner: number = 1
   displayedMatch = false
-  valueResult!: any 
+  valueResult!: any
   displayMoves = false
-  
+  displayTimer = false
 
-  ngOnInit(): void {}
 
-  displayResult(){
-    if(this.btnReady){
-      this.result = this.valueResult
-      this.displayMoves = true
-      this.displayedMatch = true
-      console.log('entra al boton')
+  ngOnInit(): void { }
+
+  displayResult() {
+    if (this.btnReady) {
+      this.displayTimer = true
+      console.log(this.displayTimer)
     }
   }
 
-  backToStart(){
+  // displayResult logic is in clearTimer, change function naming
+
+  clearTimer(value: boolean) {
+    this.displayTimer = value
+    this.result = this.valueResult
+    this.displayMoves = true
+    this.displayedMatch = true
+  }
+
+  backToStart() {
     this.gameService.deletePlayers().subscribe()
     this.router.navigate(['/starting'])
   }
@@ -38,9 +46,9 @@ export class CadetComponent implements OnInit {
   manejarValor(valor: boolean) {
     this.players.push(valor);
     console.log(this.players)
-    if(this.players.length === 2){
+    if (this.players.length === 2) {
       this.gameService.getMatchResult().subscribe({
-        next: (value)=> {
+        next: (value) => {
           this.valueResult = value
           console.log(this.valueResult)
         }

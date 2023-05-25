@@ -6,8 +6,17 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Abel';
+    src: url('assets/fonts/Abel-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body{
     min-height: 100vh;
+    font-family: 'Abel', sans-serif;
 }
 
 ul {
