@@ -14,7 +14,16 @@
     font-display: swap;
 }
 
-body{
+@font-face {
+    font-family: 'Abril Fatface';
+    src: url('assets/fonts/AbrilFatface-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+body {
     min-height: 100vh;
     font-family: 'Abel', sans-serif;
 }
